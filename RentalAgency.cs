@@ -8,5 +8,6 @@ namespace Vehicle_Rental_Management_System
 {
     internal class RentalAgency
     {
+    
     }
 }
