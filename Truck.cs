@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Vehicle_Rental_Management_System
 {
-    internal class Truck
+    internal class Truck : Vehicle
     {
+    
     }
 }

@@ -6,9 +6,16 @@ using System.Threading.Tasks;
 
 namespace Vehicle_Rental_Management_System
 {
-    internal class Car
+    internal class Car : Vehicle
     {
-   
+        private int seats;
+        private string transmission;
+        private bool convertible;
+
+        public int Seats { get { return seats; } set { seats = value; } }
+
+        public string Transmission { get { return transmission; } set { transmission = value; } }  
+        public bool Convertible { get { return convertible; } set { convertible = value; } }
     
     }
 }
