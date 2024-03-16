@@ -16,6 +16,14 @@ namespace Vehicle_Rental_Management_System
 
         public string Transmission { get { return transmission; } set { transmission = value; } }  
         public bool Convertible { get { return convertible; } set { convertible = value; } }
-    
+
+
+        public override void  DisplayDetails()
+        {
+            Console.WriteLine("Year: " + Year + "\nManufacturer: " + Manufacturer + "\nModel: " + Model + "\nRental Price:" + RentalPrice);
+
+
+
+        }
     }
 }

@@ -22,7 +22,7 @@ namespace Vehicle_Rental_Management_System
         public int Year { get { return year; } set { year = value; } }   
         public double RentalPrice { get {  return rentalPrice; } set {  rentalPrice = value; } }
 
-        public void DisplayDetails() {
+        public virtual void DisplayDetails() {
             Console.WriteLine("Year: "+Year+"\nManufacturer: "+Manufacturer+"\nModel: "+Model+"\nRental Price:"+RentalPrice);
             
             

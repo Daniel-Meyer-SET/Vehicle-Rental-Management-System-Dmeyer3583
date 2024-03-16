@@ -14,5 +14,12 @@ namespace Vehicle_Rental_Management_System
         public string FuelType { get { return fuelType; } set { fuelType = value; } }
         public bool HasFairing { get {  return hasFairing; } set {  hasFairing = value; } }
 
+        public override void DisplayDetails()
+        {
+            Console.WriteLine("Year: " + Year + "\nManufacturer: " + Manufacturer + "\nModel: " + Model + "\nRental Price:" + RentalPrice);
+
+
+
+        }
     }
 }
