@@ -12,19 +12,20 @@ namespace Vehicle_Rental_Management_System
         Vehicle[] fleet;
         private double totalRevenue;
         public double TotalRevenue {get { return totalRevenue;} set {  totalRevenue = value; } }
-
-        public void addVehicle() { 
-        
+        int fleetSize = 0;
+        public void addVehicle() {
+            fleet[fleetSize++] = new Vehicle();
         }
 
         public void RemoveVehicle()
         {
-
+            fleet[fleetSize] = null; fleetSize--;
         }
 
         public void RentVeicle(int vehicleNumber)
         {
             totalRevenue +=fleet[vehicleNumber].RentalPrice;
-        }
+        } 
+
     }
 }
