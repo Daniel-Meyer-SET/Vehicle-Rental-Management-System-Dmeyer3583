@@ -83,8 +83,7 @@ namespace Vehicle_Rental_Management_System
                                         truck.Capacity = int.Parse(Console.ReadLine());
 
                                         Console.WriteLine("is the truck four wheel drive?");
-                                        Console.WriteLine("what type of truck:");
-                                        truck.TruckType = Console.ReadLine();
+                                        
                                         switch (Console.ReadKey(false).KeyChar)
                                         {
                                             case 'y':
@@ -99,8 +98,12 @@ namespace Vehicle_Rental_Management_System
                                                     break;
                                                 }
                                         }
+                                        Console.WriteLine("what type of truck:");
+                                        truck.TruckType = Console.ReadLine();
+                                        rental.addVehicle(truck);
                                         break;
                                     }
+
                                 case 'm':
                                     {
                                         Console.WriteLine("Motorcycle:");
@@ -120,17 +123,20 @@ namespace Vehicle_Rental_Management_System
                                                 {
 
                                                     motorcycle.HasFairing = true;
+                                                    rental.addVehicle(motorcycle);
                                                     break;
                                                 }
                                             case 'n':
                                                 {
                                                     motorcycle.HasFairing = false;
+                                                    rental.addVehicle(motorcycle);
                                                     break;
                                                 }
 
                                         }
                                         break;
-
+                                       
+                                    
                                     }
 
                             }
@@ -140,6 +146,7 @@ namespace Vehicle_Rental_Management_System
                         {
                             Console.Write("choose a vehicle to rent");
                             showVehiclesInFleet(rental);
+
                             break;
                         }
                     case 'x':
@@ -149,7 +156,13 @@ namespace Vehicle_Rental_Management_System
 
                             break;
                         }
+                    case 's':
+                        {
+                            
+                            showVehiclesInFleet(rental);
 
+                            break;
+                        }
 
 
                 }

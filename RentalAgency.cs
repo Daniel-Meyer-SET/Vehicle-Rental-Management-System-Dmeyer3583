@@ -19,7 +19,7 @@ namespace Vehicle_Rental_Management_System
             fleet[fleetSize++] = newVehicle;
         }
 
-        public void RemoveVehicle()
+        public void RemoveVehicle(int vehicleNumber)
         {
             fleet[fleetSize] = null; fleetSize--;
         }
