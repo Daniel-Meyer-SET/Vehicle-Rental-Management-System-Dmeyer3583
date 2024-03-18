@@ -9,7 +9,7 @@ namespace Vehicle_Rental_Management_System
     internal class RentalAgency
     {
 
-        Vehicle[] fleet;
+        Vehicle[] fleet = new Vehicle[20];
         private double totalRevenue;
         public double TotalRevenue {get { return totalRevenue;} set {  totalRevenue = value; } }
         int fleetSize = 0;
