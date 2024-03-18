@@ -13,8 +13,10 @@ namespace Vehicle_Rental_Management_System
         private double totalRevenue;
         public double TotalRevenue {get { return totalRevenue;} set {  totalRevenue = value; } }
         int fleetSize = 0;
-        public void addVehicle() {
-            fleet[fleetSize++] = new Vehicle();
+        public Vehicle[] Fleet { get {  return fleet; } set {  fleet = value; } }
+        
+        public void addVehicle(Vehicle newVehicle) {
+            fleet[fleetSize++] = newVehicle;
         }
 
         public void RemoveVehicle()
