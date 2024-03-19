@@ -181,6 +181,7 @@ namespace Vehicle_Rental_Management_System
             for (int i = 0; i < rental.Fleet.Length; i++)
             {
                 if (rental.Fleet[i] != null) {
+                    Console.Write(i +":");
                     rental.Fleet[i].DisplayDetails();
                 }
                 
