@@ -153,13 +153,16 @@ namespace Vehicle_Rental_Management_System
                         {
                             Console.Write("choose a vehicle to rent");
                             showVehiclesInFleet(rental);
-
+                            Console.ReadLine();
+                            rental.RentVeicle(int.Parse(Console.ReadLine()));
                             break;
                         }
                     case 'x':
                         {
                             Console.Write("choose a vehicle to remove");
                             showVehiclesInFleet(rental);
+                            Console.ReadLine();
+                            rental.RemoveVehicle(int.Parse(Console.ReadLine()));
 
                             break;
                         }
