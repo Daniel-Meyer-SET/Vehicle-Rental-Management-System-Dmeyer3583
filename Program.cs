@@ -48,7 +48,7 @@ namespace Vehicle_Rental_Management_System
                                                 }
 
                                         }
-                                        Console.WriteLine("is the car a convertible y/n?");
+                                        Console.WriteLine("\nis the car a convertible y/n?");
                                         switch (Console.ReadKey(false).KeyChar)
                                         {
                                             case 'y':
@@ -66,7 +66,7 @@ namespace Vehicle_Rental_Management_System
 
                                         }
 
-                                        Console.WriteLine("Enter Rental Price");
+                                        Console.WriteLine("\nEnter Rental Price");
                                         car.RentalPrice = double.Parse(Console.ReadLine());
                                         rental.addVehicle(car);
                                         break;
@@ -100,7 +100,7 @@ namespace Vehicle_Rental_Management_System
                                                     break;
                                                 }
                                         }
-                                        Console.WriteLine("what type of truck:");
+                                        Console.WriteLine("\nwhat type of truck:");
                                         truck.TruckType = Console.ReadLine();
                                        
                                         Console.WriteLine("Enter Rental Price");
@@ -139,7 +139,7 @@ namespace Vehicle_Rental_Management_System
                                                 }
 
                                         }
-                                        Console.WriteLine("Enter Rental Price");
+                                        Console.WriteLine("\nEnter Rental Price");
                                         motorcycle.RentalPrice = double.Parse(Console.ReadLine());
 
 
@@ -175,14 +175,16 @@ namespace Vehicle_Rental_Management_System
                 }
             }
         }
+        // show each vehicle in the fleet
         static void showVehiclesInFleet(RentalAgency rental)
         {
 
             for (int i = 0; i < rental.Fleet.Length; i++)
             {
                 if (rental.Fleet[i] != null) {
-                    Console.Write(i +":");
+                    Console.WriteLine(i +":\n");
                     rental.Fleet[i].DisplayDetails();
+                    Console.WriteLine();
                 }
                 
 

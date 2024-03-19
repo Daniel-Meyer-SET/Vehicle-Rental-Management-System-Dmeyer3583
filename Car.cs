@@ -20,8 +20,9 @@ namespace Vehicle_Rental_Management_System
 
         public override void  DisplayDetails()
         {
-            Console.WriteLine("Year: " + Year + "\nManufacturer: " + Manufacturer + "\nModel: " + Model + "\nRental Price:" + RentalPrice);
-
+            base.DisplayDetails();
+            Console.WriteLine("Transmission:" + transmission);
+            Console.WriteLine("Convertible:"+ convertible);
 
 
         }

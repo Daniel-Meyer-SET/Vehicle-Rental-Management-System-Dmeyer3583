@@ -8,6 +8,7 @@ namespace Vehicle_Rental_Management_System
 {
     internal class Vehicle
     {
+
         private string model;
         private string manufacturer;
         private int year;
@@ -24,13 +25,9 @@ namespace Vehicle_Rental_Management_System
 
         public virtual void DisplayDetails() {
            
-               
-                Console.WriteLine("Year: " + Year + "\nManufacturer: " + Manufacturer + "\nModel: " + Model + "\nRental Price:" + RentalPrice);
-                
-
+              // base functionality 
+         Console.WriteLine("Year: " + Year + "\nManufacturer: " + Manufacturer + "\nModel: " + Model + "\nRental Price:" + RentalPrice);
             
-
-
 
         }
     }
