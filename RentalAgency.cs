@@ -27,6 +27,7 @@ namespace Vehicle_Rental_Management_System
         public void RentVeicle(int vehicleNumber)
         {
             totalRevenue +=fleet[vehicleNumber].RentalPrice;
+            RemoveVehicle(vehicleNumber);
         } 
 
     }

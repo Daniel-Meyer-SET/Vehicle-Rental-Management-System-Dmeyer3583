@@ -155,6 +155,7 @@ namespace Vehicle_Rental_Management_System
                             showVehiclesInFleet(rental);
                             Console.ReadLine();
                             rental.RentVeicle(int.Parse(Console.ReadLine()));
+                            showVehiclesInFleet(rental);
                             break;
                         }
                     case 'x':
@@ -163,6 +164,7 @@ namespace Vehicle_Rental_Management_System
                             showVehiclesInFleet(rental);
                             Console.ReadLine();
                             rental.RemoveVehicle(int.Parse(Console.ReadLine()));
+                            showVehiclesInFleet(rental);
 
                             break;
                         }
