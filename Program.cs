@@ -7,17 +7,18 @@ namespace Vehicle_Rental_Management_System
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to the Vehicle Rental Management System");
-            Console.WriteLine("Options:\n A: Add new vehicle\n R:Rent a vehicle \nX: Remove A vehicle\nS:Show Details");
+            
 
             RentalAgency rental = new RentalAgency();
             while (true)
             {
-                switch (Console.ReadKey(false).KeyChar)
+                Console.WriteLine("Options:\n A: Add new vehicle\n R:Rent a vehicle \nX: Remove A vehicle\nS:Show Details\n");
+                switch (Console.ReadKey(true).KeyChar)
                 {
                     case 'a':
                         {
-                            Console.WriteLine("c: car\nt:truck\nm:motorcycle");
-                            switch (Console.ReadKey(false).KeyChar)
+                            Console.WriteLine("\nc: car\nt:truck\nm:motorcycle");
+                            switch (Console.ReadKey(true).KeyChar)
                             {
                                 case 'c':
                                     {
@@ -31,7 +32,7 @@ namespace Vehicle_Rental_Management_System
                                         car.Model = Console.ReadLine();
                                         Console.WriteLine("enter number of seats:");
                                         car.Seats = int.Parse(Console.ReadLine());
-                                        Console.WriteLine("Automatic Or Manual Transmission:");
+                                        Console.WriteLine("Automatic Or Manual Transmission: a/m");
                                         switch (Console.ReadKey(false).KeyChar)
                                         {
                                             case 'a':
@@ -47,7 +48,7 @@ namespace Vehicle_Rental_Management_System
                                                 }
 
                                         }
-                                        Console.WriteLine("is the car a convertible?");
+                                        Console.WriteLine("is the car a convertible y/n?");
                                         switch (Console.ReadKey(false).KeyChar)
                                         {
                                             case 'y':
