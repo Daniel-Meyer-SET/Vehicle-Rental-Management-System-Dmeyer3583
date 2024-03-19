@@ -23,9 +23,14 @@ namespace Vehicle_Rental_Management_System
         public double RentalPrice { get {  return rentalPrice; } set {  rentalPrice = value; } }
 
         public virtual void DisplayDetails() {
-            Console.WriteLine("Year: "+Year+"\nManufacturer: "+Manufacturer+"\nModel: "+Model+"\nRental Price:"+RentalPrice);
+           
+               
+                Console.WriteLine("Year: " + Year + "\nManufacturer: " + Manufacturer + "\nModel: " + Model + "\nRental Price:" + RentalPrice);
+                
+
             
-            
+
+
 
         }
     }

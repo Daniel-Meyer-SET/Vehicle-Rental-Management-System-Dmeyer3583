@@ -61,11 +61,12 @@ namespace Vehicle_Rental_Management_System
                                                     car.Convertible = false;
                                                     break;
                                                 }
-
+                                                
 
                                         }
 
-
+                                        Console.WriteLine("Enter Rental Price");
+                                        car.RentalPrice = double.Parse(Console.ReadLine());
                                         rental.addVehicle(car);
                                         break;
                                     }
@@ -100,6 +101,9 @@ namespace Vehicle_Rental_Management_System
                                         }
                                         Console.WriteLine("what type of truck:");
                                         truck.TruckType = Console.ReadLine();
+                                       
+                                        Console.WriteLine("Enter Rental Price");
+                                        truck.RentalPrice = double.Parse(Console.ReadLine());
                                         rental.addVehicle(truck);
                                         break;
                                     }
@@ -134,9 +138,11 @@ namespace Vehicle_Rental_Management_System
                                                 }
 
                                         }
-                                        break;
-                                       
-                                    
+                                        Console.WriteLine("Enter Rental Price");
+                                        motorcycle.RentalPrice = double.Parse(Console.ReadLine());
+
+
+                                    break;
                                     }
 
                             }
@@ -171,9 +177,12 @@ namespace Vehicle_Rental_Management_System
         static void showVehiclesInFleet(RentalAgency rental)
         {
 
-            foreach (Vehicle vehicle1 in rental.Fleet)
+            for (int i = 0; i < rental.Fleet.Length; i++)
             {
-                vehicle1.DisplayDetails();
+                if (rental.Fleet[i] != null) {
+                    rental.Fleet[i].DisplayDetails();
+                }
+                
 
             }
         }
