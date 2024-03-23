@@ -21,7 +21,23 @@ namespace Vehicle_Rental_Management_System
 
         public void RemoveVehicle(int vehicleNumber)
         {
-            fleet[fleetSize] = null; fleetSize--;
+            int index = -1;
+            for (int i = index; i < fleetSize - 1; i++)
+            {
+
+                if (i == vehicleNumber){
+                    index = i;
+
+                }
+                fleet[fleetSize] = null; fleetSize--;
+
+            }
+            fleet[index] = null;
+            for (int i = index; i < fleetSize - 1; i++)
+            {
+                fleet[i] = fleet[i + 1];
+            }
+            fleetSize--;
         }
 
         public void RentVeicle(int vehicleNumber)
