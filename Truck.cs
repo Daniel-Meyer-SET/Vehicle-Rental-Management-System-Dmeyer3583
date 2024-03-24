@@ -18,6 +18,7 @@ namespace Vehicle_Rental_Management_System
 
         public override void DisplayDetails()
         {
+            // call base class method
             base.DisplayDetails();
 
             Console.WriteLine("Capacity:"+Capacity);

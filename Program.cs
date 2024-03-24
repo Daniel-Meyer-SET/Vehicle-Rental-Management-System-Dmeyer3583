@@ -5,7 +5,7 @@ namespace Vehicle_Rental_Management_System
     public class Program
     {   // main method and entry point
         static void Main(string[] args)
-        {
+        {   
             Console.WriteLine("Welcome to the Vehicle Rental Management System");
             
 
@@ -16,7 +16,7 @@ namespace Vehicle_Rental_Management_System
                 switch (Console.ReadKey(true).KeyChar)
                 {
                     case 'a':
-                        {
+                        {  // vehicle type selection
                             Console.WriteLine("\nc: car\nt:truck\nm:motorcycle");
                             switch (Console.ReadKey(true).KeyChar)
                             {

@@ -8,8 +8,9 @@ namespace Vehicle_Rental_Management_System
 {
     internal class RentalAgency
     {
-
+        // initialize fleet
         Vehicle[] fleet = new Vehicle[20];
+        
         private double totalRevenue;
         public double TotalRevenue {get { return totalRevenue;} set {  totalRevenue = value; } }
         int fleetSize = 0;
@@ -42,6 +43,7 @@ namespace Vehicle_Rental_Management_System
 
         public void RentVeicle(int vehicleNumber)
         {
+            // vehicle is removed from the fleet when rented
             totalRevenue +=fleet[vehicleNumber].RentalPrice;
             RemoveVehicle(vehicleNumber);
         } 
