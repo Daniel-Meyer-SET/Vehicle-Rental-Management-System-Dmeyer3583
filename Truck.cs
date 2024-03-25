@@ -21,9 +21,9 @@ namespace Vehicle_Rental_Management_System
             // call base class method
             base.DisplayDetails();
 
-            Console.WriteLine("Capacity:"+Capacity);
-            Console.WriteLine("Truck Type" + truckType);
-            Console.WriteLine("Four Wheel Drive" + fourWheelDrive);
+            Console.WriteLine("Capacity: "+Capacity);
+            Console.WriteLine("Truck Type: " + truckType);
+            Console.WriteLine("Four Wheel Drive: " + fourWheelDrive);
 
 
         }

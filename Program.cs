@@ -17,6 +17,7 @@ namespace Vehicle_Rental_Management_System
                 {
                     case 'a':
                         {  // vehicle type selection
+
                             Console.WriteLine("\nc: car\nt:truck\nm:motorcycle");
                             switch (Console.ReadKey(true).KeyChar)
                             {
@@ -84,7 +85,7 @@ namespace Vehicle_Rental_Management_System
                                         Console.WriteLine("enter capacity:");
                                         truck.Capacity = int.Parse(Console.ReadLine());
 
-                                        Console.WriteLine("is the truck four wheel drive?");
+                                        Console.WriteLine("is the truck four wheel drive? y/n");
                                         
                                         switch (Console.ReadKey(false).KeyChar)
                                         {
@@ -121,7 +122,7 @@ namespace Vehicle_Rental_Management_System
                                         motorcycle.Model = Console.ReadLine();
                                         Console.WriteLine("Enter fuel type");
                                         motorcycle.FuelType = Console.ReadLine();
-                                        Console.Write("Does The Motorcyle have a fairing?");
+                                        Console.Write("Does The Motorcyle have a fairing? y/n");
                                         switch (Console.ReadKey(false).KeyChar)
                                         {
                                             case 'y':
@@ -145,33 +146,54 @@ namespace Vehicle_Rental_Management_System
 
                                     break;
                                     }
-
+                                    
                             }
+
+                            Console.Clear();
                             break;
                         }
                     case 'r':
                         {
-                            Console.Write("choose a vehicle to rent");
-                            showVehiclesInFleet(rental);
-                            Console.ReadLine();
-                            rental.RentVeicle(int.Parse(Console.ReadLine()));
-                            showVehiclesInFleet(rental);
+                            if (rental.Fleet[0] != null)
+                            {
+                                Console.Clear();
+                                Console.Write("choose a vehicle to rent\n");
+                                showVehiclesInFleet(rental);
+                               // print total revenue
+                                rental.RentVeicle(int.Parse(Console.ReadLine()));
+                                Console.WriteLine("Total Revenue: "+rental.TotalRevenue+"\n");
+                                showVehiclesInFleet(rental);
+                                Console.ReadLine();
+                                Console.Clear();
+
+                            }
                             break;
                         }
                     case 'x':
                         {
-                            Console.Write("choose a vehicle to remove");
-                            showVehiclesInFleet(rental);
-                            Console.ReadLine();
-                            rental.RemoveVehicle(int.Parse(Console.ReadLine()));
-                            showVehiclesInFleet(rental);
+                            if (rental.Fleet[0] != null)
+                            {
+                                Console.Clear();
+                                Console.Write("choose a vehicle to remove\n");
+                                showVehiclesInFleet(rental);
+                               
+                                rental.RemoveVehicle(int.Parse(Console.ReadLine()));
+                                showVehiclesInFleet(rental);
+                                Console.ReadLine() ;
+                                Console.Clear() ;
+                            }
 
                             break;
                         }
                     case 's':
                         {
-                            
-                            showVehiclesInFleet(rental);
+                            if (rental.Fleet[0] != null)
+                            {
+                                Console.Clear();
+                                showVehiclesInFleet(rental);
+                                Console.ReadLine();
+                                Console.Clear();
+                            }
 
                             break;
                         }
